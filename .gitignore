@@ -101,3 +101,9 @@ InitTestScene*.unity*
 # UniVRN
 /[Aa]ssets/VRM/*
 /[Aa]ssets/UniGLTF/*
+
+# XR interaction Toolkit
+/[Aa]ssets/Samples/*
+
+# TMP
+/[Aa]ssets/TextMesh Pro/*

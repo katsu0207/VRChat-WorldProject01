@@ -24,9 +24,6 @@ public class DataCollector : UdonSharpBehaviour
 
     public void SaveData()
     {
-        Debug.Log("呼び出されてるよ！！！！！");
-
-
       string id = participantIdField != null ? participantIdField.text : "N/A";
 
         StringBuilder sb = new StringBuilder();
@@ -38,7 +35,7 @@ public class DataCollector : UdonSharpBehaviour
             if (question.name.StartsWith("7Likert"))
             {
                 int selectedValue = GetSelectedToggleValue(question);
-                sb.Append($", Q{qIndex}: {selectedValue}");
+                sb.Append($"\nQ{qIndex}: {selectedValue}");
                 qIndex++;
             }
         }
@@ -72,15 +69,5 @@ public class DataCollector : UdonSharpBehaviour
             i++;
         }
         return 0; // どれも選ばれていない場合
-    }
-
-    public void PrintAllResults()
-    {
-        Debug.Log("=== All Stored Results ===");
-        for (int i = 0; i < dataCount; i++)
-        {
-            Debug.Log(dataLines[i]);
-        }
-        Debug.Log("==========================");
     }
 }
